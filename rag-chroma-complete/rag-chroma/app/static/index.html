@@ -1,0 +1,14 @@
+<!doctype html>
+<html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Knowledge Desk · Chroma RAG</title><link rel="stylesheet" href="/static/style.css"></head>
+<body><main><header><div class="eyebrow">CHROMA RAG / KNOWLEDGE DESK</div><h1>Ask your documents.</h1>
+<p>Upload a document, ask a question, and inspect the evidence.</p></header>
+<div class="layout"><aside><h2>Your knowledge base</h2><label>API token (only if configured)<input id="token" type="password" autocomplete="off" placeholder="Shared app token"></label>
+<form id="upload"><label>Add PDF, TXT, or Markdown<input id="file" type="file" accept=".pdf,.txt,.md" required></label><button>Index document</button></form>
+<p class="hint">Text is sent to OpenAI for embeddings. Relevant passages are sent for answers. Maximum 10 MiB per file.</p>
+<button id="refresh" class="secondary">Refresh documents</button><ul id="documents"></ul></aside>
+<section><form id="ask"><label for="question">What would you like to know?</label><textarea id="question" rows="3" required maxlength="4000" placeholder="What happens when the gateway loses its connection?"></textarea>
+<div class="controls"><label>Source<select id="source"><option value="">All documents</option></select></label><label>Top K<input id="topk" type="number" min="1" max="20" value="5"></label><button>Ask question</button></div></form>
+<p class="hint">Each question is independent. Include the subject instead of saying “it” or “that”.</p>
+<p id="status" role="status" aria-live="polite"></p><article id="answer" aria-live="polite"></article><div id="sources"></div></section></div>
+<footer>Answers can be wrong. Read the cited passages. <a href="/docs">API documentation</a></footer></main><script src="/static/app.js"></script></body></html>

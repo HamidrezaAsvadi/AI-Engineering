@@ -1,0 +1,9 @@
+{"question":"How long does the gateway keep data when offline?","relevant_sources":["gateway.md"],"expected_terms":["24"],"answerable":true}
+{"question":"What protocol carries gateway messages to the broker?","relevant_sources":["gateway.md"],"expected_terms":["MQTT"],"answerable":true}
+{"question":"When are SQL Server batches written?","relevant_sources":["pipeline.md"],"expected_terms":["500","five"],"answerable":true}
+{"question":"What happens to invalid telemetry messages?","relevant_sources":["pipeline.md"],"expected_terms":["dead-letter"],"answerable":true}
+{"question":"How long must qualifying behavior last before idle is confirmed?","relevant_sources":["idle_detection.md"],"expected_terms":["five"],"answerable":true}
+{"question":"How are telemetry duplicates identified across the gateway and database pipeline?","relevant_sources":["gateway.md","pipeline.md"],"expected_terms":["device_id","timestamp_utc"],"answerable":true}
+{"question":"When is standard support available?","relevant_sources":["support.md"],"expected_terms":["09:00","17:00"],"answerable":true}
+{"question":"What is the annual subscription price?","relevant_sources":[],"expected_terms":[],"answerable":false}
+{"question":"What is the administrator's password?","relevant_sources":[],"expected_terms":[],"answerable":false}
